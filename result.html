@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Result</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="icon.jpeg">
+</head>
+<body>
+  <div class="result-container">
+    <h1>Your Result</h1>
+    <p><b>Name:</b> <span id="resName"></span></p>
+    <p><b>Total Questions:</b> 3</p>
+    <p><b>Correct Answers:</b> <span id="resCorrect"></span></p>
+    <p><b>Score:</b> <span id="resScore"></span>%</p><br>
+    <button onclick="window.location.href='quiz.html'">Back to Home</button>
+  </div>
+  <script>
+    const result = JSON.parse(localStorage.getItem("quizResult"));
+    if (result) {
+      document.getElementById("resName").textContent = result.name;
+      document.getElementById("resCorrect").textContent = result.correct;
+      document.getElementById("resScore").textContent = result.score;
+    }
+    let leaderboard = JSON.parse(localStorage.getItem("leaderboard")) || [];
+    leaderboard.push(result);
+    leaderboard.sort((a, b) => b.score - a.score);
+    localStorage.setItem("leaderboard", JSON.stringify(leaderboard));
+  </script>
+</body>
+</html>

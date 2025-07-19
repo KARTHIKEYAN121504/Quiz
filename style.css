@@ -1,0 +1,377 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  background: linear-gradient(
+    130deg,
+    #734881,
+    #2c5364,
+    #2b4249,
+    #203a43,
+    #2c5364,
+    #734881
+  );
+  background-attachment: fixed;
+  color: aliceblue;
+}
+
+.container {
+  font-size: 125%;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+h1 {
+  display: inline-flex;
+}
+
+nav {
+  background-color: black;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border: 3px solid orange;
+  border-radius: 10px;
+}
+
+a {
+  color: aliceblue;
+  text-decoration: none;
+  padding-right: 30px;
+  transition: color 0.4s ease, transform 0.4s ease, text-shadow 0.4s,
+    font-size 0.3s ease;
+  font-size: 20px;
+}
+
+a:hover {
+  cursor: pointer;
+  color: orange;
+  text-shadow: 2px 2px 4px rgba(255, 165, 0, 0.7);
+  transform: scale(1.1);
+  font-size: 25px;
+}
+
+.container1 {
+  text-align: center;
+  background-image: url(container1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 550px;
+  margin-top: 5px;
+}
+
+.icontainer1 {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  max-width: 40%;
+  color: orange;
+  text-shadow: 1px 1px whitesmoke;
+  transition: transform 0.3s ease;
+}
+
+.icontainer1:hover {
+  transform: scale(1.1);
+}
+
+.icontainer2 {
+  position: absolute;
+  top: 70%;
+  left: 71%;
+}
+
+button {
+  width: 175px;
+  height: 40px;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 3px solid orange;
+  cursor: pointer;
+  transition: transform 0.7s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+  color: whitesmoke;
+  background: linear-gradient(
+    130deg,
+    rgb(254, 203, 108),
+    rgb(255, 179, 37),
+    orange,
+    rgb(248, 192, 88)
+  );
+}
+
+.container2 {
+  color: whitesmoke;
+  text-align: center;
+  margin-left: 30%;
+  margin-top: 15px;
+  font-size: 22px;
+  max-width: 40%;
+  text-shadow: 1px 1px orange;
+  margin-bottom: 20px;
+}
+
+.container2 button {
+  width: 275px;
+  height: 40px;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 3px solid orange;
+  cursor: pointer;
+  transition: transform 0.7s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icontainer button:hover {
+  transform: scale(1.1);
+  color: whitesmoke;
+  background-color: orange;
+}
+
+.container3 {
+  text-align: center;
+  padding: 40px;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.container3 p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.img div {
+  width: 22%;
+  background: #2e2e2e;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.img div:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px orange;
+}
+
+.img img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.img div span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: orange;
+  text-shadow: 0.5px 0.5px whitesmoke;
+}
+footer {
+  background-color: black;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  z-index: 999;
+}
+
+footer a {
+  padding-right: 0px;
+}
+.container3 button {
+  width: 13%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.feedback {
+  padding: 40px;
+  background-color: #2e2e2e;
+  color: whitesmoke;
+  text-shadow: 0.5px 0.5px orange;
+  margin: 50px auto;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(255, 132, 0);
+  margin-bottom: 100px;
+}
+
+.feedback-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.feedback-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feedback-container input,
+.feedback-container textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid orange;
+  border-radius: 5px;
+  background-color: #1e1e1e;
+  color: white;
+  resize: vertical;
+}
+
+.feedback-container button {
+  width: fit-content;
+  align-self: center;
+  padding: 10px 30px;
+  font-size: 18px;
+  background-color: transparent;
+  border: 3px solid orange;
+  border-radius: 10px;
+  color: whitesmoke;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.feedback-container button:hover {
+  background-color: orange;
+  color: black;
+  transform: scale(1.05);
+}
+
+#form-success {
+  display: none;
+  margin-top: 15px;
+  color: limegreen;
+  font-weight: bold;
+}
+
+/* ---------------------- Mobile Responsive ---------------------- */
+@media (max-width: 768px) {
+  body {
+    font-size: 90%;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .container1 {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-image: none;
+  }
+
+  .icontainer1 {
+    position: static;
+    max-width: 90%;
+    margin: 20px auto;
+    padding-right: 25px;
+  }
+
+  .icontainer2 {
+    position: static;
+    margin: 10px auto;
+    text-align: center;
+    padding-right: 25px;
+  }
+
+  button,
+  .container2 button,
+  .container3 button,
+  .feedback-container button {
+    width: 90% !important;
+    height: auto;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .container2 {
+    margin: 20px auto;
+    max-width: 90%;
+    font-size: 18px;
+  }
+
+  .container3 {
+    padding: 20px;
+  }
+
+  .img {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .img div {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  nav a {
+    padding: 10px 0;
+    font-size: 18px;
+  }
+
+  .feedback {
+    padding: 20px;
+    margin: 20px auto 100px;
+    max-width: 90%;
+  }
+
+  .feedback-container input,
+  .feedback-container textarea {
+    font-size: 14px;
+  }
+
+  footer {
+    position: relative;
+    margin-left: 0;
+    height: auto;
+    padding: 10px;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    margin-left: -50px;
+  }
+
+  marquee pre {
+    white-space: normal;
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 22px;
+    display: block;
+  }
+}

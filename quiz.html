@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aptitude Test</title>
+    <link rel="icon" href="icon.jpeg" />
+    <link rel="stylesheet" href="style.css" />
+
+
+
+
+  </head>
+  <body>
+  <div>
+    <div class="container">
+      <center>
+        <h1 style="color:whitesmoke; text-shadow:1px 1px greenyellow">Aptitude Test</h1>
+        <marquee style="color:whitesmoke; font-size: 20px; font-weight: bold; width: 100%; height: 50px; text-shadow:1px 1px orange">
+          <pre>
+Your success begins with practice. Master aptitude, master opportunity.            Great careers start with great preparation — and it costs nothing.          Practice smart. Perform better. Succeed sooner</pre
+          >
+        </marquee>
+        <nav>
+          <a href="Quizmain.html">Take Quiz</a>&nbsp;&nbsp;
+          <a href="result.html">View Results</a>&nbsp;&nbsp;
+          <a href="leader.html">Leaderboard</a>&nbsp;&nbsp;
+          <a href="contact us.html">Contact Us</a>&nbsp;&nbsp;
+          <a href="#feedback">Feedback</a>
+        </nav>
+        
+      </center>
+    </div>
+    <div class="container1">
+      <div class="icontainer1">
+        <h1>
+          Test preparation that makes a difference Prepare with us – Pass your
+          test – Get the job
+        </h1>
+      </div>
+      <div class="icontainer2">
+        <button onclick='window.location.href="Quizmain.html"'>Get Free Test</button>
+      </div>
+    </div>
+    <div class="container2">
+      <h1>Aptitude Test Preparation</h1>
+      for Pre-employment Assessments<br /><br />
+
+      Unlock Your Potential: Ace your employee aptitude test or school entrance
+      exam effortlessly with our tailored online practice tests.<br /><br />
+
+      Practice with one of our free aptitude tests, or take your preparation to
+      the next level with our comprehensive test preparation packages. Sign up
+      now and start your preparation today.<br /><br />
+
+      <h2>
+        Want to try a free aptitude test? Try our free Cognitive Ability Test.
+      </h2>
+      <button>Free Cognitive Ability Test</button>
+    </div>
+    <div class="container3">
+        <p>
+          <b>Practice Tests by Category</b><br />
+          Find the test prep materials suitable for your needs. Select the relevant category below.
+        </p>
+      
+        <div class="img">
+          <div><img src="img/img1.jpg" alt="image 1"><span>Numerical Reasoning</span></div>
+          <div><img src="img/img2.jpg" alt="image 2"><span>Verbal Reasoning</span></div>
+          <div><img src="img/img3.jpg" alt="image 3"><span>Logical Thinking</span></div>
+          <div><img src="img/img4.png" alt="image 4"><span>Diagrammatic Reasoning</span></div>
+          <div><img src="img/img5.jpg" alt="image 5"><span>Spatial Awareness</span></div>
+          <div><img src="img/img6.jpg" alt="image 6"><span>Abstract Reasoning</span></div>
+          <div><img src="img/img7.png" alt="image 7"><span>Situational Judgment</span></div>
+          <div><img src="img/img8.jpg" alt="image 8"><span>Data Interpretation</span></div>
+          <div><img src="img/img9.jpg" alt="image 9"><span>Critical Thinking</span></div>
+          <div><img src="img/img10.jpg" alt="image 10"><span>Inductive Reasoning</span></div>
+          <div><img src="img/img11.jpg" alt="image 11"><span>Deductive Reasoning</span></div>
+          <div><img src="img/img12.jpg" alt="imgae 12"><span>Numerical Puzzles</span></div>
+          <div><img src="img/img13.jpg" alt="image 13"><span>Memory Test</span></div>
+        </div>
+         </div>
+         
+   <div class="feedback" id="feedback">
+  <h2>Feedback</h2>
+  <p>We value your feedback. Please share your thoughts with us.</p> 
+<!--formspree.io-->
+  <div class="feedback-container">
+    <form id="feedback-form">
+      <label for="name">Name:</label>
+      <input type="text" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" required>
+
+      <label for="phone">Phone:</label>
+      <input type="tel" name="phone">
+
+      <label for="feedback">Your Feedback:</label>
+      <textarea name="feedback" rows="4" required></textarea>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+
+    <div id="form-success">✅ Thank you! Your feedback has been sent successfully.</div>
+  </div>
+
+       
+<footer>
+      <p>
+        &copy; 2025 Aptitude Test. All rights reserved.
+        <br />
+        <a href="contact us.html" class="footer">Created By: Karthikeyan</a>    
+        
+      </p>
+ </footer>
+
+  <script>
+    document.getElementById("feedback-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+
+      fetch("https://formspree.io/f/mgvzvnbk", {
+        method: "POST",
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          document.getElementById("form-success").style.display = "block";
+          form.reset();
+        } else {
+          alert("There was an error sending your feedback.");
+        }
+      }).catch(error => {
+        alert("Network error while submitting form.");
+      });
+    });
+  </script>
+
+
+  </body>
+</html>

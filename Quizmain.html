@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Test</title>
+    <link rel="icon" href="icon.jpeg" />
+    <link rel="stylesheet" href="quiz.css" />
+  </head>
+  <body>
+    <div class="quiz-container">
+      <h1>Aptitude Quiz</h1>
+
+      <form id="quizForm">
+        <div class="question">
+          <p>
+            <b>1. What is the next number in the series: 2, 6, 12, 20, ?</b>
+          </p>
+          <label><input type="radio" name="q1" value="24" /> 24</label><br />
+          <label><input type="radio" name="q1" value="30" /> 30</label><br />
+          <label><input type="radio" name="q1" value="28" /> 28</label><br />
+          <label><input type="radio" name="q1" value="36" /> 36</label>
+        </div>
+
+        <div class="question">
+          <p>
+            <b
+              >2. A train 180 meters long is running at 60 km/h. How long will
+              it take to pass a signal pole?</b
+            >
+          </p>
+          <label><input type="radio" name="q2" value="10.8s" /> 10.8 sec</label
+          ><br />
+          <label><input type="radio" name="q2" value="9.5s" /> 9.5 sec</label
+          ><br />
+          <label><input type="radio" name="q2" value="12s" /> 12 sec</label
+          ><br />
+          <label><input type="radio" name="q2" value="8.5s" /> 8.5 sec</label>
+        </div>
+
+        <div class="question">
+          <p>
+            <b
+              >3. If A is 2 years older than B and B is twice as old as C, and
+              the sum of their ages is 34, how old is B?</b
+            >
+          </p>
+          <label><input type="radio" name="q3" value="10" /> 10</label><br />
+          <label><input type="radio" name="q3" value="12" /> 12</label><br />
+          <label><input type="radio" name="q3" value="14" /> 14</label><br />
+          <label><input type="radio" name="q3" value="16" /> 16</label>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <script>
+        document.getElementById("quizForm").onsubmit = function (e) {
+          e.preventDefault();
+          const answers = {
+            q1: "30",
+            q2: "10.8s",
+            q3: "12",
+          };
+          let correct = 0;
+          for (let i in answers) {
+            const selected = document.querySelector(
+              `input[name=${i}]:checked`  
+            );
+            if (selected !== null && selected.value === answers[i]) correct++;
+          }
+          const score = Math.round((correct / 3) * 100);
+          const username = localStorage.getItem("username");
+          localStorage.setItem(
+            "quizResult",
+            JSON.stringify({ name: username, correct, score })
+          );
+          alert("Congratulations! You have successfully completed the test. You can view your score on the results page.");
+          window.location.href = "quiz.html";
+        };
+      </script>
+    </div>
+  </body>
+</html>
